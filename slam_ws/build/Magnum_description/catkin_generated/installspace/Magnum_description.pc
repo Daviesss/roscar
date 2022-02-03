@@ -1,0 +1,8 @@
+prefix=/home/ogunsina/slam_ws/install
+
+Name: Magnum_description
+Description: Description of Magnum_description
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

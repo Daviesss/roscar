@@ -1,0 +1,248 @@
+<?xml version="1.0" ?>
+<robot name="Magnum" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find Magnum_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find Magnum_description)/urdf/Magnum.trans" />
+<xacro:include filename="$(find Magnum_description)/urdf/Magnum.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-9.329173667354923e-05 3.848712171642927e-05 0.04894523690180442"/>
+    <mass value="62.71254313371608"/>
+    <inertia ixx="0.626732" ixy="0.000217" ixz="-3.7e-05" iyy="1.018832" iyz="0.002589" izz="1.460963"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Magnum_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://Magnum_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="plate_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.004332802287149878 -7.042151966963348e-05 0.09820315644391829"/>
+    <mass value="9.986728354106381"/>
+    <inertia ixx="0.05312" ixy="-0.000348" ixz="0.004681" iyy="0.229856" iyz="6.7e-05" izz="0.276499"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.0 -0.0 -0.05"/>
+    <geometry>
+      <mesh filename="package://Magnum_description/meshes/plate_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.0 -0.0 -0.05"/>
+    <geometry>
+      <mesh filename="package://Magnum_description/meshes/plate_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="secondplate_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0008207662826036355 0.0906117261971509 0.1286614005636199"/>
+    <mass value="1.9309211537817133"/>
+    <inertia ixx="0.009879" ixy="-1e-06" ixz="1.9e-05" iyy="0.003324" iyz="-4.3e-05" izz="0.007453"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.257451 0.090609 -0.106881"/>
+    <geometry>
+      <mesh filename="package://Magnum_description/meshes/secondplate_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.257451 0.090609 -0.106881"/>
+    <geometry>
+      <mesh filename="package://Magnum_description/meshes/secondplate_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lidar_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.07543316330680092 6.876561765957338e-06 0.12447474337598766"/>
+    <mass value="3.0298602561653087"/>
+    <inertia ixx="0.002812" ixy="-0.0" ixz="3.2e-05" iyy="0.002782" iyz="-0.0" izz="0.002506"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.218508 -0.0 -0.07"/>
+    <geometry>
+      <mesh filename="package://Magnum_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.218508 -0.0 -0.07"/>
+    <geometry>
+      <mesh filename="package://Magnum_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="camera__1__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.2624325014160251 -0.004512003009916339 -0.013068118666630824"/>
+    <mass value="8.31232970395701"/>
+    <inertia ixx="0.036108" ixy="0.013224" ixz="0.000441" iyy="0.015424" iyz="-8.3e-05" izz="0.041255"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.513532 -0.000123 -0.358763"/>
+    <geometry>
+      <mesh filename="package://Magnum_description/meshes/camera__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.513532 -0.000123 -0.358763"/>
+    <geometry>
+      <mesh filename="package://Magnum_description/meshes/camera__1__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lefttyre_front_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-1.6663259182925216e-05 0.04850703137274057 5.891880391989401e-06"/>
+    <mass value="7.130674909895951"/>
+    <inertia ixx="0.013434" ixy="-0.0" ixz="1e-06" iyy="0.020801" iyz="0.0" izz="0.013437"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.099931 0.206749 -0.044379"/>
+    <geometry>
+      <mesh filename="package://Magnum_description/meshes/lefttyre_front_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.099931 0.206749 -0.044379"/>
+    <geometry>
+      <mesh filename="package://Magnum_description/meshes/lefttyre_front_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="righttyre_front_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="2.476125003786356e-07 -0.04750570664250586 9.386443557829471e-08"/>
+    <mass value="7.360960001513173"/>
+    <inertia ixx="0.014076" ixy="0.0" ixz="-0.0" iyy="0.022024" iyz="0.0" izz="0.014076"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.099092 -0.208749 -0.041393"/>
+    <geometry>
+      <mesh filename="package://Magnum_description/meshes/righttyre_front_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.099092 -0.208749 -0.041393"/>
+    <geometry>
+      <mesh filename="package://Magnum_description/meshes/righttyre_front_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lefttyre_back_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-8.45109131818178e-06 0.04750033474932158 1.4673200500636696e-05"/>
+    <mass value="7.29838027874689"/>
+    <inertia ixx="0.013899" ixy="-0.0" ixz="2e-06" iyy="0.021679" iyz="0.0" izz="0.013898"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.100988 0.206749 -0.044379"/>
+    <geometry>
+      <mesh filename="package://Magnum_description/meshes/lefttyre_back_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.100988 0.206749 -0.044379"/>
+    <geometry>
+      <mesh filename="package://Magnum_description/meshes/lefttyre_back_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="righttyre_back_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-2.9379001194318466e-07 -0.04250264195893158 9.386443845099679e-08"/>
+    <mass value="7.294313180076794"/>
+    <inertia ixx="0.013895" ixy="-0.0" ixz="0.0" iyy="0.021675" iyz="-0.0" izz="0.013895"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.100725 -0.208749 -0.041393"/>
+    <geometry>
+      <mesh filename="package://Magnum_description/meshes/righttyre_back_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.100725 -0.208749 -0.041393"/>
+    <geometry>
+      <mesh filename="package://Magnum_description/meshes/righttyre_back_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rigid5" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.0 0.05"/>
+  <parent link="base_link"/>
+  <child link="plate_1"/>
+</joint>
+
+<joint name="Rigid6" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.257451 -0.090609 0.056881"/>
+  <parent link="plate_1"/>
+  <child link="secondplate_1"/>
+</joint>
+
+<joint name="Rigid7" type="fixed">
+  <origin rpy="0 0 0" xyz="0.218508 0.0 0.02"/>
+  <parent link="plate_1"/>
+  <child link="lidar_1"/>
+</joint>
+
+<joint name="Rigid8" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.256081 0.090732 0.251882"/>
+  <parent link="secondplate_1"/>
+  <child link="camera__1__1"/>
+</joint>
+
+<joint name="Rev9" type="continuous">
+  <origin rpy="0 0 0" xyz="0.099931 -0.206749 0.044379"/>
+  <parent link="base_link"/>
+  <child link="lefttyre_front_1"/>
+  <axis xyz="-0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Rev10" type="continuous">
+  <origin rpy="0 0 0" xyz="0.099092 0.208749 0.041393"/>
+  <parent link="base_link"/>
+  <child link="righttyre_front_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Rev11" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.100988 -0.206749 0.044379"/>
+  <parent link="base_link"/>
+  <child link="lefttyre_back_1"/>
+  <axis xyz="-0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Rev12" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.100725 0.208749 0.041393"/>
+  <parent link="base_link"/>
+  <child link="righttyre_back_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+</robot>

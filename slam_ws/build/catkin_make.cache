@@ -1,0 +1,2 @@
+Magnum_description:move_bot:ydlidar_ros
+-DCATKIN_DEVEL_PREFIX=/home/ogunsina/slam_ws/devel -DCMAKE_INSTALL_PREFIX=/home/ogunsina/slam_ws/install -G Unix Makefiles

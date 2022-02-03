@@ -1,0 +1,9 @@
+int64 ENA
+int64 IN1
+int64 IN2
+int64 IN3
+int64 IN4
+int64 ENB
+int64 minDutyCycle
+int64 maxDutyCycle
+int64 dutyCycle

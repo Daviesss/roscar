@@ -1,0 +1,13 @@
+<launch>
+<param  name = "/use_sim_time" value = "true"/>
+
+<!-- start world -->
+<node  name = "gazebo" pkg = "gazebo_ros" type = "gazebo" 
+args = "$(find Magnum_description)/world/style.world" respawn = "false" output = "screen"/>
+
+<!-- include our robots  -->
+<!-- loading the launch file of the package which is Magnum_description which depends on the launch file called robots.launch  -->
+<include file = "$(find Magnum_description)/launch/robots.launch"/>
+
+
+</launch>

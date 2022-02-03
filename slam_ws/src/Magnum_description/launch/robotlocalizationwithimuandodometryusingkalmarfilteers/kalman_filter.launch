@@ -1,0 +1,7 @@
+<!-- Using the extended kalman filter node for the launch file  -->
+<launch >
+   <!-- run the ekf for map to odom config -->
+   <node pkg = "robot_localization" type ="ekf_localization_node" name = "ekf_localization_with_gps">
+   <rosparam command = "load" file ="$(find Magnum_description)/config/ekf_localization.yaml"/>
+   </node>
+</launch>
