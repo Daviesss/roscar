@@ -7,7 +7,7 @@ from SensorUtils import SensorUtils
 
 # Node for the Robot's state estimation using an Extended Kalman Filter 
 # Note 1: A particle filter would probably be easier *sighs*
-# Note 2: I tried a particle filter, it was annoying and frustrating lol :)
+# Note 2: This is just a Node i wrote for EKF localization.
 
 sensor_utils = SensorUtils()
 
